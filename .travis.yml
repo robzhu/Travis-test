@@ -5,6 +5,9 @@ solution: Travis-test.sln
 mono: 
   - latest
 
+services: 
+  - docker
+
 install:
   - nuget restore
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
