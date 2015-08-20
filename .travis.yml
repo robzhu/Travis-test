@@ -9,4 +9,4 @@ install:
 
 script:
   - xbuild /p:Configuration=Release
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./HelloWorld/bin/Release/HelloWorld.Tests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./HelloWorld.Tests/bin/Release/HelloWorld.Tests.dll
