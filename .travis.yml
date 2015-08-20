@@ -1,3 +1,5 @@
+sudo: required
+
 language: csharp
 solution: Travis-test.sln
 mono: 
