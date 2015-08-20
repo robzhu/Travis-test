@@ -1,8 +1,12 @@
 language: csharp
 solution: Travis-test.sln
+mono: 
+  - latest
+
 install:
-  - nuget restore Travis-test.sln
+  - nuget restore
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+
 script:
-  - xbuild /p:Configuration=Release Travis-test.sln
+  - xbuild /p:Configuration=Release
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./HelloWorld/bin/Release/HelloWorld.Tests.dll
